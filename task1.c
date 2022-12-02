@@ -25,5 +25,7 @@ int main() {
         }
     }
     printf("Max sum of the column is: %d in column: %d\n", max_value, max_column + 1);
+    free(matrix);
+    free(sums);
     return 0;
 } 
