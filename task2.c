@@ -32,5 +32,7 @@ int main() {
     char str[20];
     printf("Type in any number: \n");
     scanf("%19s", str);
-    printf("%s", decToHex(str));
+    char *result = decToHex(str);
+    printf("%s", result);
+    free(result);
 }
