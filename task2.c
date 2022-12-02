@@ -11,6 +11,8 @@ char* decToHex(char *dec) {
     char* hex;
     const char *elements = "0123456789ABCDEF";
     int counter = 0;
+    if (!decNum)
+        return "0\0";
     ll temp = decNum;
     while (temp) {
         counter++;
