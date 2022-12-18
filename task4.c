@@ -12,10 +12,14 @@ int checker(char el) {
 char* removeWhitespaces(char* str) {
     char *newstr = calloc(201, sizeof(char));
     int counter = 0;
+    int ans = 0;
     for (int i = 0; str[i] != '\0' && str[i] != '\n'; ++i) {
         if (!(str[i] == ' ') || (!checker(str[i + 1])))
             newstr[counter++] = str[i];
+        else
+            ans++;
     }
+    printf("%d\n", ans);
     return newstr;
 }
 
